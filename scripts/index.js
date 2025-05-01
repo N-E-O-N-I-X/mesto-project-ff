@@ -1,5 +1,4 @@
 // @todo: Темплейт карточки
-
 const cardTemplate = document.querySelector('#card-template').content;
 
 // клонируем содержимое тега template
