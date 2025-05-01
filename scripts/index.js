@@ -20,11 +20,11 @@ function deleteCard(cardElement) { //функция удаления карто�
   return cardElement.remove();
 };
 
-function placeCard() {
-  initialCards.forEach((card) => {
-    const newCard = createCard(card, deleteCard);
-    cardContainer.append(newCard);
+function placeCard() { //функция добавления карточек
+  initialCards.forEach((card) => { //перебор каждого элемента массива
+    const newCard = createCard(card, deleteCard); //объявление карточки
+    cardContainer.append(newCard); //добавление карточки в контейнер
   })
 };
 
-placeCard();
+placeCard(); //запуск функции
