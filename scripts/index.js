@@ -1,11 +1,20 @@
-// @todo: Темплейт карточки
-const cardTemplate = document.querySelector('#card-template').content;
+const cardTemplate = document.querySelector('#card-template').content; //template переменная
+const cardContainer = document.querySelector('.places__list'); //переменная контейнера для карточек
 
-// клонируем содержимое тега template
-const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+function createCard(card, deleteCard) { //функция создния карточки
+  const cardElement = cardTemplate.querySelector('.card').cloneNode(true); //клон карточки
+  const deleteButton = cardElement.querySelector('.card__delete-button'); //кнопка удаления
 
-// наполняем содержимым
-cardElement.querySelector('.user__avatar').src = 'tinyurl.com/v4pfzwy';
+  cardElement.querySelector('.card__image').src = card.link; //ссылка на картинку
+  cardElement.querySelector('.card__image').alt = card.name; //описание к картинке
+  cardElement.querySelector(".card__title").textContent = card.name; //название
+
+  deleteButton.addEventListener('click', () => { //добавление функции к кнопке удаления
+    deleteCard(cardElement);
+  })
+
+  return cardElement;
+};
 
 // @todo: DOM узлы
 
