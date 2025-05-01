@@ -16,6 +16,10 @@ function createCard(card, deleteCard) { //функция создния карт
   return cardElement;
 };
 
+function deleteCard(cardElement) { //функция удаления карточки
+  return cardElement.remove();
+}
+
 // @todo: DOM узлы
 
 // @todo: Функция создания карточки
