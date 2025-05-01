@@ -7,7 +7,7 @@ function createCard(card, deleteCard) { //функция создния карт
 
   cardElement.querySelector('.card__image').src = card.link; //ссылка на картинку
   cardElement.querySelector('.card__image').alt = card.name; //описание к картинке
-  cardElement.querySelector(".card__title").textContent = card.name; //название
+  cardElement.querySelector('.card__title').textContent = card.name; //название
 
   deleteButton.addEventListener('click', () => { //добавление функции к кнопке удаления
     deleteCard(cardElement);
