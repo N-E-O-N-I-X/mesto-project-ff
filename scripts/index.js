@@ -18,12 +18,13 @@ function createCard(card, deleteCard) { //функция создния карт
 
 function deleteCard(cardElement) { //функция удаления карточки
   return cardElement.remove();
-}
+};
 
-// @todo: DOM узлы
+function placeCard() {
+  initialCards.forEach((card) => {
+    const newCard = createCard(card, deleteCard);
+    cardContainer.append(newCard);
+  })
+};
 
-// @todo: Функция создания карточки
-
-// @todo: Функция удаления карточки
-
-// @todo: Вывести карточки на страницу
+placeCard();
